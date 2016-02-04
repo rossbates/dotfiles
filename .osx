@@ -1,0 +1,12 @@
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# rm_DS_Store_files: removes all .DS_Store file from the current dir and below
+alias rm_DS_Store_files='find . -name .DS_Store -exec rm {} \;'
+
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+
