@@ -6,11 +6,21 @@ if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
 
+# settings specific to MacBook
 if [ -f ~/.osx ]; then
   source ~/.osx
 fi
 
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
+# settings specific to MacBook
+if [ -f ~/.completions ]; then
+  source ~/.completions
+fi
+
+# use .localrc for settings specific to one system
+if [ -f ~/.localrc ]; then
+  source ~/.localrc
+fi
+
 
 
 
