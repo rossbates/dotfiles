@@ -1,4 +1,5 @@
 #profile
+
 export PS1="\h\w $ "
 
 if [ -f ~/.aliases ]; then
