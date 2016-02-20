@@ -15,7 +15,9 @@ alias ff="find . -name $1"
 alias h="history"
 alias hg="history|grep "
 alias r="fc -s"
+alias p="pwd"
 
-
+#mistyped
+alias pythong="python"
 
 
