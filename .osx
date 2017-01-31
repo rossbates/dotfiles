@@ -11,3 +11,10 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 #print current ip, syntax is specific to osx
 alias ip='ifconfig en0 | grep -w "inet" | awk '\''{print $2 }'\''' 
+
+
+#Sierra Specific
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false;
+defaults write -g InitialKeyRepeat -int 15; # Anything lower than 15 seems too fast.
+defaults write -g KeyRepeat -int 2; # You can go as low as 1, but that's too darn fast for me.
+
